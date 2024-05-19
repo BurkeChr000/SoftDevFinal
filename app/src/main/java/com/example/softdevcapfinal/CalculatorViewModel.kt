@@ -74,7 +74,7 @@ class CalculatorViewModel: ViewModel() {
 
     private fun enterNumber(number: Int) {
         if(state.operation == null) {
-            if(state.number1.length >= 6) {
+            if(state.number1.length >= MAX_NUM_LENGTH) {
                 return
             }
             state = state.copy(
@@ -82,7 +82,7 @@ class CalculatorViewModel: ViewModel() {
             )
             return
         }
-        if(state.number2.length >= 6) {
+        if(state.number2.length >= MAX_NUM_LENGTH) {
             return
         }
         state = state.copy(
@@ -91,6 +91,6 @@ class CalculatorViewModel: ViewModel() {
     }
 
     companion object {
-        private const val MAX_NUM_LENGTH = 12
+        private const val MAX_NUM_LENGTH = 6
     }
 }

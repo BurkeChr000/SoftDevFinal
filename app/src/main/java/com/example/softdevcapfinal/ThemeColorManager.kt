@@ -1,8 +1,8 @@
 package com.example.softdevcapfinal
 
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.graphics.Color
 
@@ -36,7 +36,7 @@ class ThemeColorManager {
         private set
     var folderTextColor by mutableStateOf(darkFolderTextColor)
         private set
-    var themeLogo by mutableStateOf(darkThemeLogo)
+    var themeLogo by mutableIntStateOf(darkThemeLogo)
         private set
     var darkTheme by mutableStateOf(true)
         private set
